@@ -1,0 +1,11 @@
+package com.gkaraffa.gkmc.foundation;
+
+public abstract class SyntheticScale extends HarmonizableScale{
+    public SyntheticScale() {
+        super();
+    }
+
+    public SyntheticScale(SyntheticScale pScale) throws MusicException{
+        super(pScale);   
+    }    
+}

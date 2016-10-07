@@ -1,0 +1,60 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class DorianHarmonicMinorScale extends HarmonizableScale{
+    Scale dorianBase = null;
+
+    public DorianHarmonicMinorScale(){
+        super();
+    }
+
+    public DorianHarmonicMinorScale(DorianHarmonicMinorScale pScale) throws MusicException{
+        super(pScale);
+    }
+
+    public DorianHarmonicMinorScale(String S_name) throws MusicException{
+        super();
+        Note N_tonic = new Note(S_name);
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        dorianBase = new DorianScale(N_tonic);
+
+        noteAdd(dorianBase.getNote(0));
+        noteAdd(dorianBase.getNote(1));
+        noteAdd(dorianBase.getNote(2));
+        noteAdd(Keyboard.traverseHalfStep(dorianBase.getNote(3)));
+        noteAdd(dorianBase.getNote(4));
+        noteAdd(dorianBase.getNote(5));
+        noteAdd(dorianBase.getNote(6));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " " + Scale.DORIAN_HARMONIC_MINOR);
+        setTonality(Tonality.MINOR);
+        setScaleName(Scale.DORIAN_HARMONIC_MINOR);
+    }
+
+    public DorianHarmonicMinorScale(Note N_tonic) throws MusicException{
+        super();
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        dorianBase = new DorianScale(N_tonic);
+
+        noteAdd(dorianBase.getNote(0));
+        noteAdd(dorianBase.getNote(1));
+        noteAdd(dorianBase.getNote(2));
+        noteAdd(Keyboard.traverseHalfStep(dorianBase.getNote(3)));
+        noteAdd(dorianBase.getNote(4));
+        noteAdd(dorianBase.getNote(5));
+        noteAdd(dorianBase.getNote(6));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " " + Scale.DORIAN_HARMONIC_MINOR);
+        setTonality(Tonality.MINOR);
+        setScaleName(Scale.DORIAN_HARMONIC_MINOR);
+    }
+}

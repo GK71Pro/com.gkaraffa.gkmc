@@ -1,0 +1,27 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class NonHarmonizableScale extends Scale{
+    private Note relativeMajorKey = null;
+    public NonHarmonizableScale(){
+    }
+
+    public NonHarmonizableScale(NonHarmonizableScale pScale) throws MusicException{
+        super(pScale);
+    }
+
+    public Note fifthOfNote(Note source){
+        return null;
+    }
+
+    public Note thirdOfNote(Note source){
+        return null;
+    }
+
+    public final Note getRelativeMajorKey() throws MusicException {
+        return new Note(relativeMajorKey);
+    }
+
+    public final void setRelativeMajorKey(Note nKey) {
+        relativeMajorKey = nKey;
+    }
+}

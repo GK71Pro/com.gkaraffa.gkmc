@@ -1,0 +1,11 @@
+package com.gkaraffa.gkmc.foundation;
+
+public abstract class ExoticScale extends HarmonizableScale{
+    public ExoticScale() {
+        super();
+    }
+
+    public ExoticScale(ExoticScale pScale) throws MusicException{
+        super(pScale);   
+    }    
+}

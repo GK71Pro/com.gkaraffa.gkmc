@@ -1,0 +1,56 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class DiminishedWHScale extends HarmonizableScale{
+    public DiminishedWHScale(){
+        super();
+    }
+
+    public DiminishedWHScale(DiminishedWHScale pScale) throws MusicException{
+        super(pScale);
+    }
+
+    public DiminishedWHScale(String sKey) throws MusicException{
+        super();
+        Note N_tonic = new Note(sKey);
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        noteAdd(N_tonic);
+        noteAdd(Keyboard.traverseWholeStep(N_tonic));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(1)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(2)));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(3)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(4)));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(5)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(6)));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " Diminished");
+        setTonality(Tonality.DIMINISHED);
+        setScaleName(Scale.DIMINISHED_WH);
+    }
+
+    public DiminishedWHScale(Note N_tonic) throws MusicException{
+        super();
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        noteAdd(N_tonic);
+        noteAdd(Keyboard.traverseWholeStep(N_tonic));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(1)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(2)));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(3)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(4)));
+        noteAdd(Keyboard.traverseHalfStep(noteFind(5)));
+        noteAdd(Keyboard.traverseWholeStep(noteFind(6)));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " Diminished");
+        setTonality(Tonality.DIMINISHED);
+        setScaleName(Scale.DIMINISHED_WH);
+    }
+}

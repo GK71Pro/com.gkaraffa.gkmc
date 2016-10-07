@@ -1,0 +1,217 @@
+package com.gkaraffa.gkmc.foundation;
+
+import java.util.*;
+
+public class Triad extends Chord{
+    public Triad(){
+        super(3);
+    }
+
+    public Triad(String sName) throws MusicException{
+        super(3);
+
+        String sNote = this.getNoteBlock(sName);
+        String sRemaining = this.getRemainingBlock(sName);
+        String sNameText;
+        Note nFirst;
+        Note nThird = null;
+        Note nFifth = null;
+
+        if (!(sNote.equals(null) || sRemaining.equals(null))){
+            nFirst = new Note(sNote);
+
+            if (sRemaining.equals(ChordName.MAJOR.getText())){
+                nThird = Keyboard.traverseMajorThird(nFirst);
+                nFifth = Keyboard.traversePerfectFifth(nFirst);
+                setTonality(Tonality.MAJOR);
+                sNameText = ChordName.MAJOR.getText();
+            }
+            else if (sRemaining.equals(ChordName.MINOR.getText())){
+                nThird = Keyboard.traverseMinorThird(nFirst);
+                nFifth = Keyboard.traversePerfectFifth(nFirst);
+                setTonality(Tonality.MINOR);
+                sNameText = ChordName.MAJOR.getText();
+            }
+            else if (sRemaining.equals(ChordName.DIMINISHED.getText())){
+                nThird = Keyboard.traverseMinorThird(nFirst);
+                nFifth = Keyboard.traverseDiminishedFifth(nFirst);
+                setTonality(Tonality.DIMINISHED);
+                sNameText = ChordName.DIMINISHED.getText();
+            }
+            else if (sRemaining.equals(ChordName.AUGMENTED.getText())){
+                nThird = Keyboard.traverseMajorThird(nFirst);
+                nFifth = Keyboard.traverseAugmentedFifth(nFirst);
+                setTonality(Tonality.AUGMENTED);
+                sNameText = ChordName.AUGMENTED.getText();
+            }
+            else{
+                throw (new MusicException("String cannot be parsed into a valid triad."));
+            }
+
+            noteAdd(nFirst);
+            noteAdd(nThird);
+            noteAdd(nFifth);
+            setDefined(true);
+            setName(nFirst.toString() + " " + sNameText);
+        }
+    }
+
+    public Triad(Note nTonic, HarmonizableScale hsScale) throws MusicException{
+        super(3);
+        int i_tp;
+        Note nThird;
+        Note nFifth;
+        int iThird;
+        int iFifth;
+        String sNameText;
+
+        if (!nTonic.getDefined() || !hsScale.getDefined()){
+            return;
+        }
+
+        i_tp = hsScale.getPosition(nTonic);
+
+        nThird = hsScale.getNote(i_tp + 2);
+        nFifth = hsScale.getNote(i_tp + 4);
+
+        noteAdd(new Note(nTonic));
+        noteAdd(nThird);
+        noteAdd(nFifth);
+
+        iThird = Keyboard.measureHalfSteps(nTonic, nThird);
+        iFifth = Keyboard.measureHalfSteps(nTonic, nFifth);
+
+        if ((iThird == Interval.MAJOR_3RD)
+                && (iFifth == Interval.PERFECT_5TH)){
+            setTonality(Tonality.MAJOR);
+            sNameText = ChordName.MAJOR.getText();
+        }
+        else if ((iThird == Interval.MINOR_3RD)
+                && (iFifth == Interval.PERFECT_5TH)){
+            setTonality(Tonality.MINOR);
+            sNameText = ChordName.MINOR.getText();
+        }
+        else if ((iThird == Interval.MINOR_3RD)
+                && (iFifth == Interval.DIMINISHED_5TH)){
+            setTonality(Tonality.DIMINISHED);
+            sNameText = ChordName.DIMINISHED.getText();
+        }
+        else if ((iThird == Interval.MAJOR_3RD)
+                && (iFifth == Interval.AUGMENTED_5TH)){
+            setTonality(Tonality.AUGMENTED);
+            sNameText = ChordName.AUGMENTED.getText();
+        }
+        else{
+            throw (new MusicException("String cannot be parsed into a valid triad."));
+        }
+
+        setDefined(true);
+        setName(nTonic + " " + sNameText);
+    }
+
+    public Triad(Triad T_subj) throws MusicException{
+        super(3);
+
+        if (!T_subj.getDefined()){
+            return;
+        }
+
+        noteAdd(T_subj.getChordNote(1));
+        noteAdd(T_subj.getChordNote(3));
+        noteAdd(T_subj.getChordNote(5));
+        setDefined(true);
+        setTonality(T_subj.getTonality());
+        setName(T_subj.getName());
+    }
+
+    public static ArrayList getTriadList(Note nTonic, HarmonizableScale hScale) throws MusicException{
+        ArrayList alOutput = new ArrayList();
+        Note nThird;
+        Note nFifth;
+        boolean bMinorTExist = false;
+        boolean bMajorTExist = false;
+        boolean bDimFExist = false;
+        boolean bPerfFExist = false;
+        boolean bAugFExist = false;
+
+
+        if (nTonic.getDefined() != true){
+            return (null);
+        }
+
+        if (hScale.getDefined() != true){
+            return (null);
+        }
+
+        //Interval Search
+        //Thirds search
+        //minor third search
+        nThird = Keyboard.traverseMinorThird(nTonic);
+        if (hScale.containsNote(nThird)){
+            //found minor third
+            bMinorTExist = true;
+        }
+        else{
+            bMinorTExist = false;
+        }
+
+        //major third search
+        nThird = Keyboard.traverseMajorThird(nTonic);
+        if (hScale.containsNote(nThird)){
+            //found major third
+            bMajorTExist = true;
+        }
+        else{
+            bMajorTExist = false;
+        }
+
+        //Fifths search
+        //dimimished fifth search
+        nFifth = Keyboard.traverseDiminishedFifth(nTonic);
+        if (hScale.containsNote(nFifth)){
+            //found dimimished fifth
+            bDimFExist = true;
+        }
+        else{
+            bDimFExist = false;
+        }
+
+        //perfect fifth search
+        nFifth = Keyboard.traversePerfectFifth(nTonic);
+        if (hScale.containsNote(nFifth)){
+            //found perfect fifth
+            bPerfFExist = true;
+        }
+        else{
+            bPerfFExist = false;
+        }
+
+        //augmented fifth search
+        nFifth = Keyboard.traverseAugmentedFifth(nTonic);
+        if (hScale.containsNote(nFifth)){
+            //found augmented fifth
+            bAugFExist = true;
+        }
+        else{
+            bAugFExist = false;
+        }
+
+        if ((bMinorTExist) && (bDimFExist)){
+            alOutput.add(new Triad(nTonic.toString() + " " + ChordName.DIMINISHED.getText()));
+        }
+
+        if ((bMinorTExist) && (bPerfFExist)){
+            alOutput.add(new Triad(nTonic.toString() + " " + ChordName.MINOR.getText()));
+        }
+
+        if ((bMajorTExist) && (bPerfFExist)){
+            alOutput.add(new Triad(nTonic.toString() + " " + ChordName.MAJOR.getText()));
+        }
+
+        if ((bMajorTExist) && (bAugFExist)){
+            alOutput.add(new Triad(nTonic.toString() + " " + ChordName.AUGMENTED.getText()));
+        }
+
+        return (alOutput);
+    }
+}

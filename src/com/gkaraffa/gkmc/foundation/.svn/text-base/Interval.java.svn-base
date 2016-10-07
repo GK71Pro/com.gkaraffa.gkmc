@@ -1,0 +1,22 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class Interval{
+    static public final int ROOT = 0;
+    static public final int MINOR_2ND = 1;
+    static public final int MAJOR_2ND = 2;
+    static public final int MINOR_3RD = 3;
+    static public final int MAJOR_3RD = 4;
+    static public final int DIMINISHED_4TH = 4;
+    static public final int PERFECT_4TH = 5;
+    static public final int AUGMENTED_4TH = 6;
+    static public final int DIMINISHED_5TH = 6;
+    static public final int PERFECT_5TH = 7;
+    static public final int AUGMENTED_5TH = 8;
+    static public final int MINOR_6TH = 8;
+    static public final int MAJOR_6TH = 9;
+    static public final int DIMINISHED_7TH = 9;
+    static public final int MINOR_7TH = 10;
+    static public final int MAJOR_7TH = 11;
+    static public final int AUGMENTED_7TH = 12;
+    static public final int OCTAVE = 12;
+}

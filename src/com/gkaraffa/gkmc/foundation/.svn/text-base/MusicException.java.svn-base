@@ -1,0 +1,10 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class MusicException extends Exception{
+    public MusicException(){
+    }
+
+    public MusicException(String exceptionString){
+        super(exceptionString);
+    }
+}

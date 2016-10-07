@@ -1,0 +1,60 @@
+package com.gkaraffa.gkmc.foundation;
+
+public class PhrygianHarmonicMinorScale extends HarmonizableScale{
+    Scale phrygianBase = null;
+
+    public PhrygianHarmonicMinorScale(){
+        super();
+    }
+
+    public PhrygianHarmonicMinorScale(PhrygianHarmonicMinorScale pScale) throws MusicException{
+        super(pScale);
+    }
+
+    public PhrygianHarmonicMinorScale(String S_name) throws MusicException{
+        super();
+        Note N_tonic = new Note(S_name);
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        phrygianBase = new PhrygianScale(N_tonic);
+
+        noteAdd(phrygianBase.getNote(0));
+        noteAdd(phrygianBase.getNote(1));
+        noteAdd(Keyboard.traverseHalfStep(phrygianBase.getNote(2)));
+        noteAdd(phrygianBase.getNote(3));
+        noteAdd(phrygianBase.getNote(4));
+        noteAdd(phrygianBase.getNote(5));
+        noteAdd(phrygianBase.getNote(6));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " " + Scale.PHRYGIAN_HARMONIC_MINOR);
+        setTonality(Tonality.MINOR);
+        setScaleName(Scale.PHRYGIAN_HARMONIC_MINOR);
+    }
+
+    public PhrygianHarmonicMinorScale(Note N_tonic) throws MusicException{
+        super();
+
+        if (!N_tonic.getDefined()){
+            return;
+        }
+
+        phrygianBase = new PhrygianScale(N_tonic);
+
+        noteAdd(phrygianBase.getNote(0));
+        noteAdd(phrygianBase.getNote(1));
+        noteAdd(Keyboard.traverseHalfStep(phrygianBase.getNote(2)));
+        noteAdd(phrygianBase.getNote(3));
+        noteAdd(phrygianBase.getNote(4));
+        noteAdd(phrygianBase.getNote(5));
+        noteAdd(phrygianBase.getNote(6));
+
+        setDefined(true);
+        setName(N_tonic.getName() + " " + Scale.PHRYGIAN_HARMONIC_MINOR);
+        setTonality(Tonality.MINOR);
+        setScaleName(Scale.PHRYGIAN_HARMONIC_MINOR);
+    }
+}

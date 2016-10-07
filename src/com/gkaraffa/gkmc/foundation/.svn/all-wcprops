@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/gkmc~subversion/!svn/ver/69/gkmc/src/com.gkaraffa.gkmc.foundation
+END
+Tonality.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Tonality.java
+END
+LydianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/LydianScale.java
+END
+MusicException.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/20/gkmc/src/com.gkaraffa.gkmc.foundation/MusicException.java
+END
+NoteSeries.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/NoteSeries.java
+END
+ChordName.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/ChordName.java
+END
+SyntheticScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/SyntheticScale.java
+END
+Interval.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gkmc~subversion/!svn/ver/38/gkmc/src/com.gkaraffa.gkmc.foundation/Interval.java
+END
+HarmonicMinorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/HarmonicMinorScale.java
+END
+NonHarmonizableScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/gkmc~subversion/!svn/ver/58/gkmc/src/com.gkaraffa.gkmc.foundation/NonHarmonizableScale.java
+END
+Chord.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Chord.java
+END
+PhrygianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/PhrygianScale.java
+END
+PentatonicMinorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/PentatonicMinorScale.java
+END
+IonianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/IonianScale.java
+END
+MusicComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/45/gkmc/src/com.gkaraffa.gkmc.foundation/MusicComponent.java
+END
+PentatonicMajorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/PentatonicMajorScale.java
+END
+MixolydianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/MixolydianScale.java
+END
+EnigmaticScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/EnigmaticScale.java
+END
+ChromaticScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/ChromaticScale.java
+END
+DorianHarmonicMinorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/DorianHarmonicMinorScale.java
+END
+PhrygianHarmonicMinorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/PhrygianHarmonicMinorScale.java
+END
+Triad.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Triad.java
+END
+HarmonizableScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/gkmc~subversion/!svn/ver/58/gkmc/src/com.gkaraffa.gkmc.foundation/HarmonizableScale.java
+END
+DiminishedHWScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/DiminishedHWScale.java
+END
+Scale.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/gkmc~subversion/!svn/ver/69/gkmc/src/com.gkaraffa.gkmc.foundation/Scale.java
+END
+BebopDominantScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/gkmc~subversion/!svn/ver/68/gkmc/src/com.gkaraffa.gkmc.foundation/BebopDominantScale.java
+END
+AddNineChord.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/AddNineChord.java
+END
+DiminishedWHScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/DiminishedWHScale.java
+END
+Keyboard.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Keyboard.java
+END
+LocrianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/LocrianScale.java
+END
+PentatonicScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/gkmc~subversion/!svn/ver/51/gkmc/src/com.gkaraffa.gkmc.foundation/PentatonicScale.java
+END
+DorianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/DorianScale.java
+END
+SeventhChord.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/SeventhChord.java
+END
+BebopDorianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/BebopDorianScale.java
+END
+AugmentedScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/AugmentedScale.java
+END
+DiatonicScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/gkmc~subversion/!svn/ver/61/gkmc/src/com.gkaraffa.gkmc.foundation/DiatonicScale.java
+END
+MelodicMinorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/MelodicMinorScale.java
+END
+ExoticScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/gkmc~subversion/!svn/ver/56/gkmc/src/com.gkaraffa.gkmc.foundation/ExoticScale.java
+END
+AeolianScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/AeolianScale.java
+END
+NinthChord.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/NinthChord.java
+END
+Tone.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Tone.java
+END
+Note.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/gkmc~subversion/!svn/ver/55/gkmc/src/com.gkaraffa.gkmc.foundation/Note.java
+END
+BebopMajorScale.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/gkmc~subversion/!svn/ver/67/gkmc/src/com.gkaraffa.gkmc.foundation/BebopMajorScale.java
+END
